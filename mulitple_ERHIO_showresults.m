@@ -7,7 +7,7 @@ mncrate_array_1 = [1e3];%[2e2 2e2 1e3];
 noiseflag_array_1 = [1];%[0 1 1];
 noiselevel_array_1 = [3];%[1 2 3]
 %flipflag_array = [0 0 1 1 1];
-flipflag_array = [1 0 0 0 0];
+flipflag_array = [1 0 0 1 0];
 %%%% no noise
 
 counter = 1;
