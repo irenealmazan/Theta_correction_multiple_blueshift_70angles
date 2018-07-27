@@ -2,17 +2,11 @@ addpath(genpath('./m_scripts/'));
 addpath(genpath('./calc_functions'));
 
 
-<<<<<<< HEAD
-jitterlevel_1 = [20];%[0 5 10 20 40];
-mncrate_array_2 = [1e3];
-noiseflag_array_2 = [1];
-noiselevel_array_2 = [3];
-=======
+
 jitterlevel = [20]%[0 5 10 20 40];%0 10 20 40];
 mncrate_array = [1e3];%[2e2 2e2 1e3];
 noiseflag_array = [1];%[0 1 1];
 noiselevel_array = [3];%[1 2 3]
->>>>>>> 68572996d9cbcabcecbbef26a3ee0e73bbb75a46
 %%%% no noise
 
 
