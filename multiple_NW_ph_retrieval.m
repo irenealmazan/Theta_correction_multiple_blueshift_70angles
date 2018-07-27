@@ -4,8 +4,8 @@ addpath(genpath('./m_scripts/'));
 addpath(genpath('./calc_functions'));
 
 
-jitterlevel = [0 5 10 20 40];%0 10 20 40];
-mncrate_array = [2e2];%[2e2 2e2 1e3];
+jitterlevel = [0 5 10 20 40];
+mncrate_array = [2e2 2e2 1e3];
 noiseflag_array = [0 1 1];
 noiselevel_array = [1 2 3];
 %%%% no noise
@@ -45,7 +45,7 @@ for mm = 1:numel(mncrate_array)
             pause(.1);
         end
         %}
-        Niter_rho = 1;
+        
         NW_ph_retrieval_BCDI;
         
        save([savefolder '/results.mat']);
