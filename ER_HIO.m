@@ -29,7 +29,7 @@ end
 
 
 
-for lll = 1:5
+for lll = 1:3
     
     er_iter = 20;
     flagER = 1;
