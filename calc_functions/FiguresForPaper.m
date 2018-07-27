@@ -457,7 +457,7 @@ classdef FiguresForPaper
             
         end
         
-        function [] = figure2_rightpanel(NW1,NW2,NW3,titleNW1,titleNW2,titleNW3,phasecolor,window,index,dimension,fig_num)
+        function [] = figure2_rightpanel(NW1,NW2,NW3,titleNW1,titleNW2,titleNW3,intenscolor,phasecolor,window,index,dimension,fig_num)
             
             figure(fig_num);
             clf;
@@ -490,7 +490,7 @@ classdef FiguresForPaper
                 title([titleNW1]);
                 set(gca,'FontSize',30);
                 axis off;
-                caxis([0 0.095]);
+                caxis(intenscolor);
                 
                 subplot(322);
                 imagesc(angle(NW1_to_plot));
@@ -508,7 +508,7 @@ classdef FiguresForPaper
                 title([titleNW2 ]);
                 set(gca,'FontSize',30);
                 axis off;
-                caxis([0 0.095]);
+                caxis(intenscolor);
                 
                 subplot(324);
                 imagesc(angle(NW2_to_plot));
@@ -527,7 +527,7 @@ classdef FiguresForPaper
                 title([titleNW3 ]);
                 set(gca,'FontSize',30);
                 axis off;
-                caxis([0 0.095]);
+                caxis(intenscolor);
                 
                 subplot(326);
                 imagesc(angle(NW3_to_plot));
