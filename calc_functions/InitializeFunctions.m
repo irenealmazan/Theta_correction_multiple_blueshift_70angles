@@ -18,7 +18,7 @@ classdef InitializeFunctions
             %% Phase retrieval parameters:
             
             % Iteration parameters:
-            Niter_rho = 2000;
+            Niter_rho = 1;
             Niter_pos = 1;
             Niter_theta = 1;
             freq_pos = 1;

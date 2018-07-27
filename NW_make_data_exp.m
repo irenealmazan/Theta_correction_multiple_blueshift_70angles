@@ -1,7 +1,4 @@
 % This script prepares the structure data_exp
-
-
-
     
 [Niter_rho, Niter_pos,...
     Niter_theta,freq_pos,freq_store,freq_restart,freq_shrink_wrap,tau_backtrack_rho,beta_ini_rho,...
