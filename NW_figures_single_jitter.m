@@ -4,9 +4,9 @@ DisplayResults.show_rho_theta_update(6,errlist,rho.*support_iter,midsl,angles_li
 
 h2 = figure(7);
 clf;
-plot(log10([newobj.chi' errlist]),'LineWidth',3.0);
+plot(log10([struct_best_ERHIO.chi' errlist]),'LineWidth',3.0);
 hold on;
-plot(log10(newobj.chi),'LineWidth',3.0);
+plot(log10(struct_best_ERHIO.chi),'LineWidth',3.0);
 %title('error metric recip. space');
 xlabel('Iterations');
 ylabel('log(\epsilon)');
@@ -71,8 +71,8 @@ midpoint = [round(size(rho_2DFT_shift,1)/2)+1 round(size(rho_2DFT_shift,2)/2)+1 
 phase_rho_2DFT_shift = angle(rho_2DFT_shift(midpoint(1),midpoint(2),midpoint(3)));
 
 % test phase ofset:
-phaseoffset_rho = 1.5;
-phaseoffset_rho_ERHIO = 1.7;
+phaseoffset_rho = 1.48;
+phaseoffset_rho_ERHIO = 1.52;
 
 DisplayResults.compare_two_objects(NW*sqrt(mncntrate/mn).*conj(NW),rho_shift.*support_shift_fin.*conj(NW)*exp(-1i*phase_rho_shift)*exp(-1i*phaseoffset_rho),'object','retrieved object',[1 128],[midpoint_1(2) midpoint_1(3)],'23',31);
 DisplayResults.compare_two_objects(NW*sqrt(mncntrate/mn).*conj(NW),rho_2DFT_shift*exp(-1i*phase_rho_2DFT_shift).*support_new_shift_final.*conj(NW)*exp(-1i*phaseoffset_rho_ERHIO),'','',[1 128],[midpoint_1(2) midpoint_1(3)],'23',32);
@@ -83,12 +83,12 @@ DisplayResults.compare_two_objects(NW*sqrt(mncntrate/mn),rho_2DFT_shift,'','',[1
 
 % figures:
 
-intenscolor = [0 0.03];
-phase_color = [0 2.1];
-dimension = 1;
-FiguresForPaper.figure2_rightpanel(NW*sqrt(mncntrate/mn)*exp(-1i*phase_NW),rho_2DFT_shift*exp(-1i*phase_rho_2DFT_shift).*support_new_shift_final,rho_shift.*exp(-1i*phase_rho_shift).*support_shift_fin,'','','',intenscolor,phase_color,[1 128 1 70],[midpoint_1(dimension)],num2str(dimension),26);
+intenscolor = [0 0.35];
+phase_color = [0 2];
+dimension = 3;
+FiguresForPaper.figure2_rightpanel(NW*sqrt(mncntrate/mn)*exp(-1i*phase_NW),rho_2DFT_shift*exp(-1i*phase_rho_2DFT_shift).*support_new_shift_final,rho_shift.*exp(-1i*phase_rho_shift).*support_shift_fin,'','','',intenscolor,phase_color,[1 128 1 128],[midpoint_1(dimension)],num2str(dimension),26);
 
-intenscolor = [0 0.03];
+intenscolor = [0 0.3];
 phase_color = [-0.1 0.1];
 FiguresForPaper.figure2_rightpanel(NW*sqrt(mncntrate/mn).*conj(NW),rho_2DFT_shift*exp(-1i*phase_rho_2DFT_shift).*conj(NW).*support_new_shift_final*exp(-1i*phaseoffset_rho_ERHIO),rho_shift.*conj(NW)*exp(-1i*phase_rho_shift)*exp(-1i*phaseoffset_rho).*support_shift_fin ,'','','',intenscolor,phase_color,[1 128 1 70],[midpoint_1(dimension)],num2str(dimension),27);
 

@@ -550,7 +550,7 @@ classdef FiguresForPaper
         end
         
         
-         function [] = figure5_bottompanel(struct_toplot,phasecolor,phasecolor_2,window,index,dimension,fig_num)
+         function [] = figure5_bottompanel(struct_toplot,intenscolor,phasecolor,phasecolor_2,window,index,dimension,fig_num)
             
             figure(fig_num);
             clf;
@@ -588,7 +588,7 @@ classdef FiguresForPaper
                     colorbar;          
                     set(gca,'FontSize',30);
                     axis off;
-                    caxis([0 0.095]);
+                    caxis(intenscolor);
                     
                     subplot(3,numel(struct_toplot),numel(struct_toplot)+jj);
                     imagesc(angle(NW1_to_plot));
