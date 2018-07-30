@@ -45,10 +45,3 @@ for mm = 1:numel(mncrate_array_1)
             pause(.1);
         end
         %}
-        NW_ph_retrieval_BCDI;
-        
-       save([savefolder '/results.mat']);
-
-    end
-    
-end
