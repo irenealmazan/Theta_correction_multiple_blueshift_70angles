@@ -2,12 +2,12 @@ addpath(genpath('./m_scripts/'));
 addpath(genpath('./calc_functions'));
 
 
-jitterlevel_1 = [0 5 10 20 40];%[0 5 10 20 40];
-mncrate_array_1 = [1e3];%[2e2 2e2 1e3];
+jitterlevel_1 = [0];%[0 5 10 20 40];
+mncrate_array_1 = [2e2];%[2e2 2e2 1e3];
 noiseflag_array_1 = [1];%[0 1 1];
-noiselevel_array_1 = [3];%[1 2 3]
+noiselevel_array_1 = [1];%[1 2 3]
 %flipflag_array = [0 0 1 1 1];
-flipflag_array = [1 0 0 1 0];
+flipflag_array = [1];
 %%%% no noise
 
 counter = 1;
@@ -29,7 +29,7 @@ for mm = 1:numel(mncrate_array_1)
         
         
         
-        load(['data_ERHIO/struct_ERHIO_ini' noiselevel_str '_jitter_' num2str(percent)]);
+        load(['data_ERHIO_ini/struct_ERHIO_ini' noiselevel_str '_jitter_' num2str(percent)]);
         
         figure(mm);
         plot(log10(struct_best_ERHIO.chi));
