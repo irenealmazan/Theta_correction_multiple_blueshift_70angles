@@ -11,15 +11,14 @@ im_sum_sim = zeros(Npix);
 % Angular gitter:
  index_to_distort = [1:numel(delta_thscanvals)];
 switch addAngJitter
-    case 0
-        [dth_disp] =  Phretrieval_functions.generate_angular_jitter(delta_thscanvals,index_to_distort,percent);
     case 1
         dth_disp = zeros(numel(delta_thscanvals),1);
         dth_disp(index_to_distort) = [1e-3];
     case 2
         [dth_disp] = Phretrieval_functions.generate_angular_jitter(delta_thscanvals,index_to_distort,percent); 
+        save(['Jitter_' num2str(percent) 'percent.mat'],'dth_disp');
     case 3
-        load('Original_jitter');
+        load(['Jitter_' num2str(percent) 'percent.mat']);
 end
 
 
@@ -27,7 +26,7 @@ end
      
  [dq_shift_real] = DiffractionPatterns.calc_dqshift_for_given_th(delta_thscanvals + dth_disp',ki_o,kf_o,kf_o-ki_o);
     
- [ simI,rock_curve,Proj_vol,FT_Proj_vol,Qterm] = DiffractionPatterns.calc_dp(dq_shift_real,probe,NW,X,Y,Z);
+ [ simI,rock_curve,Proj_vol,FT_Proj_vol,Qterm] = DiffractionPatterns.calc_dp(dq_shift_real,probe,NW_shift,X,Y,Z);
 
  if plotResults
      figure(27);clf;
@@ -93,3 +92,4 @@ if plotResults
     
     drawnow;
 end
+

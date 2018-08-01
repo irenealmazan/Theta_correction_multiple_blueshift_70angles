@@ -1,1 +1,0 @@
-function jfact=jfact(k,pin)b=pin(1);q=pin(2);bigb=pin(3);energy=pin(4);theta=ktotheta(k,etolambda(energy));jfact=bigb.*(q+(1-q)./(1+b.*sin(theta.*pi/180).^2));

@@ -30,5 +30,6 @@ end
 probe = ones(size(X));
 
 %% Calculate diffraction patterns
+NW_check_CoM;
 NW_calc_dp_BCDI;
 NW_add_dp_noise;

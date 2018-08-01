@@ -23,7 +23,7 @@ display(['MAKING A ' whichSample ' SAMPLE'])
 addNWsf = 0; 
 if(addNWsf) display('ADDING STACKING FAULTS');end
 
-addAngJitter = 2;
+addAngJitter = 3;
 switch addAngJitter
     case 0
         display('NO ANGULAR JITTER')

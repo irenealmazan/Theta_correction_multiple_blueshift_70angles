@@ -1,1 +1,0 @@
-function const=f_e_rad% Classical electron radius (Angstroms)const= 2.81794092e-5;

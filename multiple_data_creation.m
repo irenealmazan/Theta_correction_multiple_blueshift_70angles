@@ -2,13 +2,13 @@ addpath(genpath('./m_scripts/'));
 addpath(genpath('./calc_functions'));
 
 
-jitterlevel = [0 5 10 20 40];%0 10 20 40];
+jitterlevel = [70 90];%[0 5 10 20 40];%0 10 20 40];
 mncrate_array = [2e2 2e2 1e3];
 noiseflag_array = [0 1 1];
-noiselevel_array = [1 2 3]
+noiselevel_array = [1 2 3];%[1 2 3];
 %%%% no noise
 
-
+NW_flags;
 
 for mm = 1:numel(mncrate_array)
     

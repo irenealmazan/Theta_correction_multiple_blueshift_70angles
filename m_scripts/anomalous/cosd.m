@@ -1,1 +1,0 @@
-function y = cosd(x)% take cosine of angle in degreesfact= pi/180;y= cos(fact*x);

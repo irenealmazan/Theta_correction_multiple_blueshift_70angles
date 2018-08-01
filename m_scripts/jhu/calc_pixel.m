@@ -1,1 +1,0 @@
-function intensity = calc_pixel(allpos, nn, nncolumn)
