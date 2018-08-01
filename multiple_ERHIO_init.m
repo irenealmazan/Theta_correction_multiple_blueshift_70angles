@@ -1,5 +1,5 @@
-addpath(genpath('./m_scripts/'));
-addpath(genpath('./calc_functions'));
+addpath(genpath('../m_scripts/'));
+addpath(genpath('../calc_functions'));
 
 
 

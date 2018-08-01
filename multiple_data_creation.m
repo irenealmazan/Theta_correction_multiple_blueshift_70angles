@@ -1,5 +1,5 @@
-addpath(genpath('./m_scripts/'));
-addpath(genpath('./calc_functions'));
+addpath(genpath('../m_scripts/'));
+addpath(genpath('../calc_functions'));
 
 
 jitterlevel = [70 90];%[0 5 10 20 40];%0 10 20 40];
